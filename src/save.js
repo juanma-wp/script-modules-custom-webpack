@@ -18,7 +18,7 @@ import { useBlockProps } from '@wordpress/block-editor';
 export default function save() {
 	return (
 		<p { ...useBlockProps.save() }>
-			{ 'Script Modules Custom Webpack – hello from the saved content!' }
+			{ 'Script Modules View – hello from the saved content!' }
 		</p>
 	);
 }
