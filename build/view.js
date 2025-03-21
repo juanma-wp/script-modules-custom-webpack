@@ -1,1 +1,214 @@
-var r,e,o,t,a={11:(r,e,o)=>{o.a(r,(async(r,e)=>{try{var t=o(517),a=o(896),p=o(271),n=r([t,a,p]);[t,a,p]=n.then?(await n)():n,(0,t.moduleOne)(),(0,a.moduleTwo)(),(0,p.moduleThree)(),e()}catch(r){e(r)}}))},271:r=>{r.exports=import("module-3")},517:r=>{r.exports=import("module-1")},896:r=>{r.exports=import("module-2")}},p={};function n(r){var e=p[r];if(void 0!==e)return e.exports;var o=p[r]={exports:{}};return a[r](o,o.exports,n),o.exports}r="function"==typeof Symbol?Symbol("webpack queues"):"__webpack_queues__",e="function"==typeof Symbol?Symbol("webpack exports"):"__webpack_exports__",o="function"==typeof Symbol?Symbol("webpack error"):"__webpack_error__",t=r=>{r&&r.d<1&&(r.d=1,r.forEach((r=>r.r--)),r.forEach((r=>r.r--?r.r++:r())))},n.a=(a,p,n)=>{var u;n&&((u=[]).d=-1);var m,c,s,d=new Set,f=a.exports,i=new Promise(((r,e)=>{s=e,c=r}));i[e]=f,i[r]=r=>(u&&r(u),d.forEach(r),i.catch((r=>{}))),a.exports=i,p((a=>{var p;m=(a=>a.map((a=>{if(null!==a&&"object"==typeof a){if(a[r])return a;if(a.then){var p=[];p.d=0,a.then((r=>{n[e]=r,t(p)}),(r=>{n[o]=r,t(p)}));var n={};return n[r]=r=>r(p),n}}var u={};return u[r]=r=>{},u[e]=a,u})))(a);var n=()=>m.map((r=>{if(r[o])throw r[o];return r[e]})),c=new Promise((e=>{(p=()=>e(n)).r=0;var o=r=>r!==u&&!d.has(r)&&(d.add(r),r&&!r.d&&(p.r++,r.push(p)));m.map((e=>e[r](o)))}));return p.r?c:n()}),(r=>(r?s(i[o]=r):c(f),t(u)))),u&&u.d<0&&(u.d=0)},n(11);
+import * as __WEBPACK_EXTERNAL_MODULE__wordpress_interactivity_8e89b257__ from "@wordpress/interactivity";
+/******/ var __webpack_modules__ = ({
+
+/***/ "./src/view.js":
+/*!*********************!*\
+  !*** ./src/view.js ***!
+  \*********************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/interactivity */ "@wordpress/interactivity");
+/* harmony import */ var module_1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! module-1 */ "module-1");
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([module_1__WEBPACK_IMPORTED_MODULE_1__]);
+module_1__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+/* eslint-disable no-console, import/no-unresolved */
+
+
+(0,module_1__WEBPACK_IMPORTED_MODULE_1__.moduleOne)();
+setTimeout(() => {
+  Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! module-2 */ "module-2")).then(module => {
+    const {
+      moduleTwo
+    } = module;
+    moduleTwo();
+  }).catch(error => {
+    console.error("Error loading module-3:", error);
+  });
+}, 2000);
+const {
+  state
+} = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)("script-modules-block-view", {
+  state: {
+    text: "Hello World",
+    clicked: false,
+    color: () => state.clicked ? "red" : "blue"
+  },
+  actions: {
+    loadModule() {
+      console.log("loadModule");
+      Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! module-3 */ "module-3")).then(module => {
+        const {
+          moduleThree
+        } = module;
+        const value = moduleThree();
+        state.text = value;
+        state.clicked = true;
+      }).catch(error => {
+        console.error("Error loading module-3:", error);
+      });
+    }
+  }
+});
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ "@wordpress/interactivity":
+/*!*******************************************!*\
+  !*** external "@wordpress/interactivity" ***!
+  \*******************************************/
+/***/ ((module) => {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__wordpress_interactivity_8e89b257__;
+
+/***/ }),
+
+/***/ "module-1":
+/*!***************************!*\
+  !*** external "module-1" ***!
+  \***************************/
+/***/ ((module) => {
+
+module.exports = import("module-1");;
+
+/***/ }),
+
+/***/ "module-2":
+/*!***************************!*\
+  !*** external "module-2" ***!
+  \***************************/
+/***/ ((module) => {
+
+module.exports = import("module-2");;
+
+/***/ }),
+
+/***/ "module-3":
+/*!***************************!*\
+  !*** external "module-3" ***!
+  \***************************/
+/***/ ((module) => {
+
+module.exports = import("module-3");;
+
+/***/ })
+
+/******/ });
+/************************************************************************/
+/******/ // The module cache
+/******/ var __webpack_module_cache__ = {};
+/******/ 
+/******/ // The require function
+/******/ function __webpack_require__(moduleId) {
+/******/ 	// Check if module is in cache
+/******/ 	var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 	if (cachedModule !== undefined) {
+/******/ 		return cachedModule.exports;
+/******/ 	}
+/******/ 	// Create a new module (and put it into the cache)
+/******/ 	var module = __webpack_module_cache__[moduleId] = {
+/******/ 		// no module.id needed
+/******/ 		// no module.loaded needed
+/******/ 		exports: {}
+/******/ 	};
+/******/ 
+/******/ 	// Execute the module function
+/******/ 	__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 
+/******/ 	// Return the exports of the module
+/******/ 	return module.exports;
+/******/ }
+/******/ 
+/************************************************************************/
+/******/ /* webpack/runtime/async module */
+/******/ (() => {
+/******/ 	var webpackQueues = typeof Symbol === "function" ? Symbol("webpack queues") : "__webpack_queues__";
+/******/ 	var webpackExports = typeof Symbol === "function" ? Symbol("webpack exports") : "__webpack_exports__";
+/******/ 	var webpackError = typeof Symbol === "function" ? Symbol("webpack error") : "__webpack_error__";
+/******/ 	var resolveQueue = (queue) => {
+/******/ 		if(queue && queue.d < 1) {
+/******/ 			queue.d = 1;
+/******/ 			queue.forEach((fn) => (fn.r--));
+/******/ 			queue.forEach((fn) => (fn.r-- ? fn.r++ : fn()));
+/******/ 		}
+/******/ 	}
+/******/ 	var wrapDeps = (deps) => (deps.map((dep) => {
+/******/ 		if(dep !== null && typeof dep === "object") {
+/******/ 			if(dep[webpackQueues]) return dep;
+/******/ 			if(dep.then) {
+/******/ 				var queue = [];
+/******/ 				queue.d = 0;
+/******/ 				dep.then((r) => {
+/******/ 					obj[webpackExports] = r;
+/******/ 					resolveQueue(queue);
+/******/ 				}, (e) => {
+/******/ 					obj[webpackError] = e;
+/******/ 					resolveQueue(queue);
+/******/ 				});
+/******/ 				var obj = {};
+/******/ 				obj[webpackQueues] = (fn) => (fn(queue));
+/******/ 				return obj;
+/******/ 			}
+/******/ 		}
+/******/ 		var ret = {};
+/******/ 		ret[webpackQueues] = x => {};
+/******/ 		ret[webpackExports] = dep;
+/******/ 		return ret;
+/******/ 	}));
+/******/ 	__webpack_require__.a = (module, body, hasAwait) => {
+/******/ 		var queue;
+/******/ 		hasAwait && ((queue = []).d = -1);
+/******/ 		var depQueues = new Set();
+/******/ 		var exports = module.exports;
+/******/ 		var currentDeps;
+/******/ 		var outerResolve;
+/******/ 		var reject;
+/******/ 		var promise = new Promise((resolve, rej) => {
+/******/ 			reject = rej;
+/******/ 			outerResolve = resolve;
+/******/ 		});
+/******/ 		promise[webpackExports] = exports;
+/******/ 		promise[webpackQueues] = (fn) => (queue && fn(queue), depQueues.forEach(fn), promise["catch"](x => {}));
+/******/ 		module.exports = promise;
+/******/ 		body((deps) => {
+/******/ 			currentDeps = wrapDeps(deps);
+/******/ 			var fn;
+/******/ 			var getResult = () => (currentDeps.map((d) => {
+/******/ 				if(d[webpackError]) throw d[webpackError];
+/******/ 				return d[webpackExports];
+/******/ 			}))
+/******/ 			var promise = new Promise((resolve) => {
+/******/ 				fn = () => (resolve(getResult));
+/******/ 				fn.r = 0;
+/******/ 				var fnQueue = (q) => (q !== queue && !depQueues.has(q) && (depQueues.add(q), q && !q.d && (fn.r++, q.push(fn))));
+/******/ 				currentDeps.map((dep) => (dep[webpackQueues](fnQueue)));
+/******/ 			});
+/******/ 			return fn.r ? promise : getResult();
+/******/ 		}, (err) => ((err ? reject(promise[webpackError] = err) : outerResolve(exports)), resolveQueue(queue)));
+/******/ 		queue && queue.d < 0 && (queue.d = 0);
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/make namespace object */
+/******/ (() => {
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = (exports) => {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/ })();
+/******/ 
+/************************************************************************/
+/******/ 
+/******/ // startup
+/******/ // Load entry module and return exports
+/******/ // This entry module used 'module' so it can't be inlined
+/******/ var __webpack_exports__ = __webpack_require__("./src/view.js");
+/******/ 
+
+//# sourceMappingURL=view.js.map
