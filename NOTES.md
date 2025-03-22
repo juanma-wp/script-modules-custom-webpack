@@ -4,6 +4,7 @@ Script Module functions are defined at [`wp-includes/script-modules.php`](https:
 
 ---
 
+**Modules marked as "static" will be preloaded **
 _`interactivity/index.min.js` & `module1` are preloaded for faster execution_
 
 ```js
