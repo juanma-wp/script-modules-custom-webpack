@@ -60,6 +60,14 @@ const {
           default: camelCase
         } = yield Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! https://esm.run/lodash-es/camelCase */ "https://esm.run/lodash-es/camelCase"));
         console.log(camelCase("__FOO_BAR__"));
+        const {
+          fetchPosts,
+          newPost
+        } = yield Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! fetchPosts */ "fetchPosts"));
+        const posts = yield fetchPosts();
+        console.log("Posts:", posts);
+        const newPostResponse = yield newPost();
+        console.log("New post:", newPostResponse);
       } catch (error) {
         console.error("Error loading module-3:", error);
       }
@@ -88,6 +96,16 @@ module.exports = import("@lodash/startCase");;
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_MODULE__wordpress_interactivity_8e89b257__;
+
+/***/ }),
+
+/***/ "fetchPosts":
+/*!*****************************!*\
+  !*** external "fetchPosts" ***!
+  \*****************************/
+/***/ ((module) => {
+
+module.exports = import("fetchPosts");;
 
 /***/ }),
 

@@ -40,6 +40,12 @@ const { state } = store("script-modules-block-view", {
 					`https://esm.run/lodash-es/camelCase`
 				);
 				console.log(camelCase("__FOO_BAR__"));
+
+				const { fetchPosts, newPost } = yield import("fetchPosts");
+				const posts = yield fetchPosts();
+				console.log("Posts:", posts);
+				const newPostResponse = yield newPost();
+				console.log("New post:", newPostResponse);
 			} catch (error) {
 				console.error("Error loading module-3:", error);
 			}
